@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cmd=""
+for i in $@; do cmd="$cmd $i"; done
+
+docker exec -it [[COMPOSE_PROJECT_NAME]]-php-1 sh -c "$cmd"

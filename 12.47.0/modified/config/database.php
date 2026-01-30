@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-
+$db_password='';
 if (env('DB_PASSWORD') > '') {
     $db_password = env('DB_PASSWORD');
 } elseif (env('DB_PASSWORD_FILE') > '' && is_file(env('DB_PASSWORD_FILE'))) {
