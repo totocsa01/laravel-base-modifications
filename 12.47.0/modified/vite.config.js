@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
         server: {
             host,
             port,
-            strictPort: env.VITE_STRICTPORT === 'true',
+            strictPort: env.VITE_STRICT_PORT === 'true',
             https: env.VITE_PROTOCOL === 'https'
                 ? {
                     key: fs.readFileSync(env.VITE_HTTPS_KEY),
@@ -25,12 +25,6 @@ export default defineConfig(({ mode }) => {
                 port,
             },
             cors: {
-                /*origin: (origin, callback) => {
-                    if (!origin) return callback(null, true)
-
-                    const allowed = /^https:\/\/([a-z0-9-]+\.)*totocsa01\.test(:\d+)?$/i
-                    callback(null, allowed.test(origin))
-                },*/
                 origin: true,
                 credentials: true,
             },

@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
         server: {
             host,
             port,
-            strictPort: env.VITE_STRICTPORT === 'true',
+            strictPort: env.VITE_STRICT_PORT === 'true',
             https: env.VITE_PROTOCOL === 'https'
                 ? {
                     key: fs.readFileSync(env.VITE_HTTPS_KEY),
